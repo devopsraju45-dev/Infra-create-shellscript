@@ -22,7 +22,7 @@ create_ec2() {
 }
 
 #AMI_ID=$(aws ec2 describe-images --filters "Name=name,Values=Centos-7-DevOps-Practice" | jq '.Images[].ImageId' | sed -e 's/"//g')
-AMI_ID=ami-09972909256632f62
+AMI_ID=ami-005d1c2f7f99cdb06
 SGID=$(aws ec2 describe-security-groups --filters Name=group-name,Values=${SG_NAME} | jq  '.SecurityGroups[].GroupId' | sed -e 's/"//g')
 
 
